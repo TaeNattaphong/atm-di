@@ -1,4 +1,4 @@
-package atm;
+package atm_xml;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
 //        DataSource dataSource = new DataSource("customers.txt");
 //        Bank bank = new Bank(dataSource);
-//        ATM atm = new ATM(bank);
-//        ATMSimulator atmSimulator = new ATMSimulator(atm);
+//        ATM atm_xml = new ATM(bank);
+//        ATMSimulator atmSimulator = new ATMSimulator(atm_xml);
 //        atmSimulator.run();
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("xml_config/config.xml");
         ATMSimulator atmSimulator = context.getBean("simulator", ATMSimulator.class);
         atmSimulator.run();
 
